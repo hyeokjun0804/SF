@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/page.css}">
+</head>
+
+<body>
+    <div id="wrap">
+
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+		
+        <h1>피플즈</h1>
+        <br>
+        <div class="rectang">
+            <div class="info">
+                <p><img th:src="@{/img/위치.png}">인천 부평구 시장로30번길 11</p>
+                <p><img th:src="@{/img/전화.png}">0507-1367-6612</p>
+                <p><img th:src="@{/img/시간.png}">11:50 - 21:30</p><br>
+            </div>
+        </div>
+            <br>
+        <div class="rectangle">
+            <div class="info">
+                <h4>메뉴</h4><br>
+                <p>시카고피자&emsp;22,000원</p>
+                <p>보스턴피자&emsp;21,000원</p>
+                <p>샐러드 스파게티&emsp;14,000원</p>
+                <p>버팔로윙&emsp;14,000원</p>
+            </div>
+        </div>
+            <br>
+            <div class="rectangl">
+                <div class="info">
+                    <h4>소개</h4><br>
+                    <p>시카고피자로 유명한 부평의 피자집이다.<br>
+                        치즈가 가득하고 도우가 쫄깃하다.</p>
+                </div>
+            </div>
+            <br>
+                    <!-- 지도가 표시될 div -->
+    <div id="map" style="width:1280px;height:400px; margin: 0 auto;"></div>
+
+    <!-- 카카오지도 API 스크립트 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7840ffe1e515c6c72f07ba3e3da854f2"></script>
+
+    <script>
+        // 카카오맵 SDK 로드 완료 시 호출되는 콜백 함수
+        kakao.maps.load(function() {
+            // 지도를 표시할 div
+            var container = document.getElementById('map');
+            // 지도의 중심 좌표 설정 (피플즈 좌표)
+            var center = new kakao.maps.LatLng(37.4932414747495, 126.726390794891);
+            var options = {
+                center: center,
+                level: 3
+            };
+
+            // 지도 생성
+            var map = new kakao.maps.Map(container, options);
+
+            // 지도에 마커 표시
+            var marker = new kakao.maps.Marker({
+                position: center, // 마커의 위치 설정 (피플즈 좌표)
+                map: map
+            });
+        });
+    </script>
+                               
+<br>
+		<footer th:replace="~{footer :: footerFragment}"></footer>
+    </div> 
+</body>
+</html>

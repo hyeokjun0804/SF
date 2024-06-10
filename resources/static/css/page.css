@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#wrap {
+    width: 100%;
+}
+
+/* 헤더 */
+.header {
+    width: 1280px; margin: 0 auto;
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 작은로고 */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* 카테고리 */
+.categories {
+    background-color: #fff;
+    text-align: center;
+}
+
+.category {
+    display: inline-block;
+    margin: 0 40px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em; /* 조정된 글자 크기 */
+}
+
+.category:hover {
+    color: #007bff;
+}
+
+/*로그인*/
+.login {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+h1{ text-align: center;font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;  color:black;}
+
+.rectang{
+	
+	width: 400px;
+	height: auto;
+	background-color: white;
+	border: 2px solid black;
+	padding: 20px;
+	margin: 0 auto; /* 수평 가운데 정렬 */
+ 	display: flex;
+	align-items: center;
+}
+
+.rectangle {
+	width: 400px;
+	height: auto;
+	background-color: white;
+	border: 2px solid black;
+	text-align: center; /* 가운데 정렬 */
+	padding: 20px;
+	margin: 0 auto; /* 수평 가운데 정렬 */
+}
+
+.rectangl{
+	width: 800px;
+	height: auto;
+	background-color: #f2f2f2;
+	border: 2px solid black;
+	padding: 20px;
+	margin: 0 auto; /* 수평 가운데 정렬 */
+	text-align: center;
+}
+
+.price {
+        font-size: 20px;
+    }
+
+.info {
+  margin-top: 0;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.dish {
+  margin-right: 10px;
+}
+
+.info {
+  margin-left: 10px;
+}
+.info img {
+
+  width: 13%;
+  height: auto; /* 높이는 자동으로 조정됨 */
+  display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+}
+
+/* 특정 이미지 크기 조절 (선택적) */
+ 
+.break {
+  text-align: left; /* 글씨 왼쪽 정렬 */
+  margin-left: 20px; /* 왼쪽 여백 추가 */
+}
+.child {
+  margin-top: 0; /* 첫 번째 p 요소의 상단 마진 제거 */
+}
+
+.footer {
+	height:250px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: gray;
+    text-align: center;
+}
+.footer li {
+	list-style-type: none;
+}

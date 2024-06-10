@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/page.css}">
+</head>
+
+<body>
+    <div id="wrap">
+
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+		
+        <h1>함지박</h1>
+        <br>
+        <div class="rectang">
+            <div class="info">
+                <p><img th:src="@{/img/위치.png}">서울 구로구 경인로22</p>
+                <p><img th:src="@{/img/전화.png}">02-2616-4155</p>
+                <p><img th:src="@{/img/시간.png}">10:00 - 21:00<br>
+                (설날, 추석은 휴무)</p><br>
+            </div>
+        </div>
+            <br>
+        <div class="rectangle">
+            <div class="info">
+                <h4>메뉴</h4><br>
+                <p>짜장면&emsp;&emsp;7,500원</p>
+                <p>짬뽕&emsp;&emsp;8,500원</p>
+                <p>탕순이&emsp;&emsp;14,000원</p>
+                <p>제육덮밥&emsp;11,000원</p>
+            </div>
+        </div>
+            <br>
+            <div class="rectangl">
+                <div class="info">
+                    <h4>소개</h4><br>
+                    <p>구로에서 맛있는 중식당이다.<br>
+                        여러가지를 한번에 먹을 수 있는 세트가 많다.<br>
+                        제육덮밥도 사람들이 잘 모르는 추천 메뉴이다.</p>
+                </div>
+            </div>
+            <br>
+                    <!-- 지도가 표시될 div -->
+    <div id="map" style="width:1280px;height:400px; margin: 0 auto;"></div>
+
+    <!-- 카카오지도 API 스크립트 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7840ffe1e515c6c72f07ba3e3da854f2"></script>
+
+    <script>
+        // 카카오맵 SDK 로드 완료 시 호출되는 콜백 함수
+        kakao.maps.load(function() {
+            // 지도를 표시할 div
+            var container = document.getElementById('map');
+            // 지도의 중심 좌표 설정 (함지박 좌표)
+            var center = new kakao.maps.LatLng(37.4893533227119, 126.825220559378);
+            var options = {
+                center: center,
+                level: 3
+            };
+
+            // 지도 생성
+            var map = new kakao.maps.Map(container, options);
+
+            // 지도에 마커 표시
+            var marker = new kakao.maps.Marker({
+                position: center, // 마커의 위치 설정 (함지박 좌표)
+                map: map
+            });
+        });
+    </script>
+                               
+<br>
+		<footer th:replace="~{footer :: footerFragment}"></footer>
+    </div> 
+</body>
+</html>

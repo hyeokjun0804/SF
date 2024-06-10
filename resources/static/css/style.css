@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#wrap {
+    width: 100%;
+}
+
+/* 헤더 */
+.header {
+    width: 1280px; margin: 0 auto;
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 작은로고 */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* 카테고리 */
+.categories {
+    background-color: #fff;
+    text-align: center;
+}
+
+.category {
+    display: inline-block;
+    margin: 0 40px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em; /* 조정된 글자 크기 */
+}
+
+.category:hover {
+    color: #007bff;
+}
+
+/*로그인*/
+.login {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: #0056b3;
+}
+
+/* 메인페이지 로고 */
+.nav {
+    width: 1280px; margin: 0 auto;
+    text-align: center;
+}
+
+.nav img {
+    width: 400px;
+    height: auto;
+}
+
+/* 검색 */
+.search-container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 60px;
+    text-align: center;
+}
+
+.search-container input[type=text] {
+    padding: 20px;
+    margin: 0 auto;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container input[type=submit] {
+    padding: 20px 40px;
+    margin: 0 auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container input[type=submit]:hover {
+    background-color: #0056b3;
+}
+
+/* 배너 */
+.banner {
+    margin: 0 auto;
+    text-align: center;
+}
+.banner img {
+    width: 400px;
+    height: 400px;
+}
+
+/* 컨텐츠 */
+.contents {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content1 {
+    margin-top: 60px;
+    height: 250px;
+    border: 1px solid;
+    padding: 50px 0;
+}
+.rank {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rank-list {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 정중앙 정렬 */
+}
+
+.content2 {
+    margin-top: 60px;
+    height: 250px;
+    padding: 50px 0;
+}
+
+.content3 {
+    height: 250px;
+    margin-top: 60px;
+    padding: 50px 0;
+}
+
+/* 바닥글 */
+.footer {
+	height:250px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: gray;
+    text-align: center;
+}
+.footer li {
+	list-style-type: none;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/page.css}">
+</head>
+
+<body>
+    <div id="wrap">
+
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+		
+        <h1>돈부리</h1>
+        <br>
+        <div class="rectang">
+            <div class="info">
+                <p><img th:src="@{/img/위치.png}">서울 노원구 동일로 1343</p>
+                <p><img th:src="@{/img/전화.png}">02-937-1295</p>
+                <p><img th:src="@{/img/시간.png}">11:30 - 20:00<br>
+                (매주 월요일, 일요일 휴무)</p><br>
+            </div>
+        </div>
+            <br>
+        <div class="rectangle">
+            <div class="info">
+                <h4>메뉴</h4><br>
+                <p>가츠동&emsp;&emsp;10,000원</p>
+                <p>에비 가츠동&emsp;&emsp;11,000원</p>
+                <p>믹스 가츠동&emsp;11,000원</p>
+                <p>사케동&emsp;&emsp;16,000원</p>
+            </div>
+        </div>
+            <br>
+            <div class="rectangl">
+                <div class="info">
+                    <h4>소개</h4><br>
+                    <p>가게가 협소하여 웨이팅이 30분정도 있을 수 있다. <br>
+                        사케동은 생연어가 올라가는데 비리지도 않고 양파를 따로 준다.</p>
+                </div>
+            </div>
+            <br>
+                    <!-- 지도가 표시될 div -->
+    <div id="map" style="width:1280px;height:400px; margin: 0 auto;"></div>
+
+    <!-- 카카오지도 API 스크립트 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7840ffe1e515c6c72f07ba3e3da854f2"></script>
+
+    <script>
+        // 카카오맵 SDK 로드 완료 시 호출되는 콜백 함수
+        kakao.maps.load(function() {
+            // 지도를 표시할 div
+            var container = document.getElementById('map');
+            // 지도의 중심 좌표 설정 (돈부리 좌표)
+            var center = new kakao.maps.LatLng(37.648494374797, 127.061997930473);
+            var options = {
+                center: center,
+                level: 3
+            };
+
+            // 지도 생성
+            var map = new kakao.maps.Map(container, options);
+
+            // 지도에 마커 표시
+            var marker = new kakao.maps.Marker({
+                position: center, // 마커의 위치 설정 (돈부리 좌표)
+                map: map
+            });
+        });
+    </script>
+                               
+<br>
+		<footer th:replace="~{footer :: footerFragment}"></footer>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/age.css}">
+</head>
+
+<body>
+    <div id="wrap">
+    
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+
+        <h1>나이대별 맛집</h1>
+
+        <div class="box">
+            <div class="age">나이대</div>
+            <ul>
+                <li>
+                    <a th:href="@{/age1}">10대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age2}">20대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age3}">30대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age4}">40대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age5}">50대</a>
+                </li>
+            </ul>
+        </div>
+        
+        <h1>10대</h1>
+
+        <div class="card-container">
+            <div class="card">
+            	<a th:href="@{/donburi}">
+                	<img th:src="@{/img/일식3.jpg}" alt="음식 사진">
+                	<h2>돈부리</h2>
+                </a>
+                <h4>일식</h4>
+            </div>
+            <div class="card">
+                <a th:href="@{/honey}">
+                    <img th:src="@{/img/허니돈.jpg}" alt="음식 사진">
+                    <h2>허니돈</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/hamjibak}">
+                	<img th:src="@{/img/함지박.jpg}" alt="음식 사진">
+                	<h2>함지박</h2>
+                </a>
+                <h4>중식</h4>
+            </div>
+        </div>
+        <footer th:replace="~{footer :: footerFragment}"></footer>      
+    </div>
+</body>
+</html>

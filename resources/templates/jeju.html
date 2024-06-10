@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/foodtype.css}">
+</head>
+
+<body>
+    <div id="wrap">
+
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+
+        <h1>지역별 맛집</h1>
+
+        <div class="box">
+            <div class="type">지역</div>
+            <ul>
+                <li>
+                    <a th:href="@{/seoul}">서울</a>
+                </li>
+                <li>
+                    <a th:href="@{/incheon}">인천</a>
+                </li>
+                <li>
+                    <a th:href="@{/busan}">부산</a>
+                </li>
+                <li>
+                    <a th:href="@{/jeju}">제주도</a>
+                </li>       
+            </ul>
+        </div>
+
+        <h1>제주</h1>
+
+        <div class="card-container">
+        	<div class="card">
+            	<a th:href="@{/cdga}">
+                	<img th:src="@{/img/칠돈가.jpg}" alt="음식 사진">
+                	<h2>칠돈가</h2>
+                </a>
+                <h4>한식</h4>
+            </div> 
+        </div>
+        <footer th:replace="~{footer :: footerFragment}"></footer>
+    </div> 
+</body>
+</html>

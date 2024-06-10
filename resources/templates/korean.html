@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/foodtype.css}">
+</head>
+
+<body>
+    <div id="wrap">
+
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+
+        <h1>음식 종류별 맛집</h1>
+
+        <div class="box">
+            <div class="type">음식 종류</div>
+            <ul>
+                <li>
+                    <a th:href="@{/korean}">한식</a>
+                </li>
+                <li>
+                    <a th:href="@{/chinese}">중식</a>
+                </li>
+                <li>
+                    <a th:href="@{/japanes}">일식</a>
+                </li>
+                <li>
+                    <a th:href="@{/western}">양식</a>
+                </li>       
+            </ul>
+        </div>
+
+        <h1>한식</h1>
+
+        <div class="card-container">
+            <div class="card">
+            	<a th:href="@{/dawon}">
+	                <img th:src="@{/img/다원국수.jpg}" alt="음식 사진">
+	                <h2>다원국수</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+                <a th:href="@{/lee}">
+                    <img th:src="@{/img/이촌성모메존칼국수.jpg}" alt="음식 사진">
+                    <h2>이촌성모메존칼국수</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+                <a th:href="@{/nanpo}">
+                    <img th:src="@{/img/난포.jpg}" alt="음식 사진">
+                    <h2>난포</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+                <a th:href="@{/honey}">
+                    <img th:src="@{/img/허니돈.jpg}" alt="음식 사진">
+                    <h2>허니돈</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/jinjuzip}">
+                	<img th:src="@{/img/진주집.jpg}" alt="음식 사진">
+                	<h2>진주집</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/ouk}">
+                	<img th:src="@{/img/우래옥.jpg}" alt="음식 사진">
+                	<h2>우래옥</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/mdkj}">
+	                <img th:src="@{/img/명동교자.jpg}" alt="음식 사진">
+	                <h2>명동교자 본점</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/aesung}">
+	                <img th:src="@{/img/애성회관.jpg}" alt="음식 사진">
+	                <h2>애성회관 한우곰탕</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/cdga}">
+                	<img th:src="@{/img/칠돈가.jpg}" alt="음식 사진">
+                	<h2>칠돈가</h2>
+                </a>
+                <h4>한식</h4>
+            </div> 
+        </div>
+        <footer th:replace="~{footer :: footerFragment}"></footer>
+    </div> 
+</body>
+</html>

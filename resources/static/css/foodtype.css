@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#wrap {
+    width: 100%;
+}
+
+/* 헤더 */
+.header {
+    width: 1280px; margin: 0 auto;
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 작은로고 */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* 카테고리 */
+.categories {
+    background-color: #fff;
+    text-align: center;
+}
+
+.category {
+    display: inline-block;
+    margin: 0 40px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em; /* 조정된 글자 크기 */
+}
+
+.category:hover {
+    color: #007bff;
+}
+
+/*로그인*/
+.login {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: #0056b3;
+}
+h1{
+    text-align: center;
+}
+.box{
+    height: 200px;
+}
+.type {
+    position: relative;
+    top: 20px;
+    left: 24%;
+    padding: 10px;
+    background-color: #DEE0F2;
+    border-radius: 30px;
+    text-align: center;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.3em;
+}
+.box ul {
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+    list-style-type: none;
+    background-color: #F1F7FF;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.card-container {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    display: grid; /* 그리드 레이아웃 사용 */
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열을 동일한 너비로 설정 */
+    gap: 20px;
+    justify-content: center; /* 가운데 정렬 */
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    height: 80%; 
+}
+.card h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+
+/* 바닥글 */
+.footer {
+	height:250px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: gray;
+    text-align: center;
+}
+.footer li {
+	list-style-type: none;
+}

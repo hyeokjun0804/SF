@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/info.css}">
+</head>
+
+<body>
+    <div id="wrap">
+
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+		
+        <div>
+        <c>SoulFood소개</c>
+        </div>
+        <div class="container">
+          <div class="abc">
+            <img th:src="@{/img/쏘푸.jpg}">
+          </div>
+          <div class="#">
+            <h1>쏘푸, 맛집 탐험의 새로운 기준</h1>
+            <p>최근 식당들은 과장된 리뷰, 홍보성 글 등으로 인해 정보의 혼란이 많습니다.
+            <br>SoulFood는 경험을 바탕으로 맛있는 맛집들을 소개하기 위해 만들어졌습니다.<br>
+            신뢰성을 바탕으로 정말 맛있는 식당들만 여러 기준을 평가하여 소개합니다.<br>
+            연령별, 음식 종류별, 지역별 맛집들을 입맛에 맞게 찾아보세요.</p>
+          </div>
+        </div>
+          
+        <div class="container">
+            <div class="abc">
+            <img th:src="@{/img/엄지척.png}">
+            </div>
+            <div class="#">
+            <h1>쏘푸, 맛집 탐험의 새로운 기준</h1>
+            <p>최근 식당들은 과장된 리뷰, 홍보성 글 등으로 인해 정보의 혼란이 많습니다.
+                <br>SoulFood는 경험을 바탕으로 맛있는 맛집들을 소개하기 위해 만들어졌습니다.<br>
+                신뢰성을 바탕으로 정말 맛있는 식당들만 여러 기준을 평가하여 소개합니다.<br>
+                연령별, 음식 종류별, 지역별 맛집들을 입맛에 맞게 찾아보세요.</p>
+            </div>
+        </div>
+        <footer th:replace="~{footer :: footerFragment}"></footer>
+    </div>  
+</body>
+</html>

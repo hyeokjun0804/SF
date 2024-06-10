@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/age.css}">
+</head>
+
+<body>
+    <div id="wrap">
+    
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+
+        <h1>나이대별 맛집</h1>
+
+        <div class="box">
+            <div class="age">나이대</div>
+            <ul>
+                <li>
+                    <a th:href="@{/age1}">10대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age2}">20대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age3}">30대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age4}">40대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age5}">50대</a>
+                </li>
+            </ul>
+        </div>
+
+        <h1>30대</h1>
+
+        <div class="card-container">
+            <div class="card">
+                <a th:href="@{/lee}">
+                    <img th:src="@{/img/이촌성모메존칼국수.jpg}" alt="음식 사진">
+                    <h2>이촌성모메존칼국수</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/jinjuzip}">
+                	<img th:src="@{/img/진주집.jpg}" alt="음식 사진">
+                	<h2>진주집</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/olenoramen}">
+                	<img th:src="@{/img/오레노라멘.jpg}" alt="음식 사진">
+                	<h2>오레노라멘 본점</h2>
+                </a>
+                <h4>일식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/lplkbg}">
+                	<img th:src="@{/img/르프리크.jpg}" alt="음식 사진">
+                	<h2>르프리크 버거</h2>
+                </a>
+                <h4>양식</h4>
+            </div>
+        </div>
+        <footer th:replace="~{footer :: footerFragment}"></footer>
+    </div>    
+</body>
+</html>

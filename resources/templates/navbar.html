@@ -1,0 +1,15 @@
+<nav th:fragment="navbarFragment" class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+<div class="header">
+            <a th:href="@{/index}"><img class="logo" th:src="@{/img/쏘푸.jpg}"></a>
+            <div class="categories">
+                <a th:href="@{/info}" class="category">소개</a>
+                <a th:href="@{/age1}" class="category">나이대별 맛집</a>
+                <a th:href="@{/seoul}" class="category">지역별 맛집</a>
+                <a th:href="@{/korean}" class="category">음식 종류별 맛집</a>
+                <a th:href="@{/question/list}" class="category">게시판</a>
+            </div>
+            <a class="login" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+            <a class="login" sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
+            <a class="nav-link" th:href="@{/user/signup}">회원가입</a>
+        </div>
+</nav>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div id="wrap">   
+    	<nav th:replace="~{navbar :: navbarFragment}"></nav>
+        <div class="nav">
+            <img th:src="@{/img/쏘푸메인.jpg}" alt="Soul Food">
+        </div>
+
+        <div class="search-container">
+        <div class="col-6">
+            <div class="input-group">
+                <input type="text" id="search_kw" class="form-control" th:value="${kw}">
+                <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+            </div>
+            </div>
+        </div>
+        <div class="banner">
+            <img th:src="@{/img/다원국수.jpg}" alt="다원국수">
+            <img th:src="@{/img/피플즈.jpg}" alt="피플즈">
+            <img th:src="@{/img/칠돈가.jpg}" alt="칠돈가">
+        </div>
+
+        <div class="contents">
+            <div class="content1">
+                <h1>맛집 랭킹</h1><br>
+                <div class="rank">
+                    <div class="rank-list">
+                        <h2>한식 맛집 랭킹</h2>
+                        <ol>
+                            <li><a th:href="@{/lee}">이촌성모메존칼국수</a></li>
+                            <li><a th:href="@{/jinjuzip}">진주집</a></li>
+                            <li><a th:href="@{/nanpo}">난포</a></li>
+                            <li><a th:href="@{/lee}">이촌성모메존칼국수</a></li>
+                            <li><a th:href="@{/dawon}">다원국수</a></li>
+                        </ol>
+                    </div>
+            
+                    <div class="rank-list">
+                        <h2>중식 맛집 랭킹</h2>
+                        <ol>
+                            <li><a th:href="@{/hidirao}">하이디라오</a></li>
+                            <li><a th:href="@{/hamjibak}">함지박</a></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
+            
+                    <div class="rank-list">
+                        <h2>일식 맛집 랭킹</h2>
+                        <ol>
+                            <li><a th:href="@{/olenoramen}">오레노라멘</a></li>
+                            <li><a th:href="@{/donburi}">돈부리</a></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
+                    <div class="rank-list">
+                        <h2>양식 맛집 랭킹</h2>
+                        <ol>
+                            <li><a th:href="@{/lplkbg}">르프리크</a></li>
+                            <li><a th:href="@{/ljmpz}">이재모피자</a></li>
+                            <li><a th:href="@{/ppz}">피플즈</a></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="content2">
+                <h1>맛집 News</h1><br>
+                <a href="#">KBS 생생정보통 맛집' 구로구 밥도둑편</a><br>
+                <a href="#">신세계 센텀시티, '온기정' 등 새 맛집 추가 오픈</a><br>
+                <a href="#">봄제철 맛있는 한식집 소개</a><br>
+            </div>
+            <div class="content3">
+                <h1>Soul Food 소개</h1><br>
+                <p> 최근 식당들은 과장된 리뷰, 홍보성 글 등으로 인해 정보의 혼란이 많습니다.<br>
+                    SoulFood는 경험을 바탕으로 맛있는 맛집들을 소개하기 위해 만들어졌습니다.<br>
+                    신뢰성을 바탕으로 정말 맛있는 식당들만 여러 기준을 평가하여 소개합니다.<br>
+                    연령별, 음식 종류별, 지역별 맛집들을 입맛에 맞게 찾아보세요.<br></p>
+            </div>
+        </div>
+        <footer th:replace="~{footer :: footerFragment}"></footer>
+    </div>  
+</body>
+</html>

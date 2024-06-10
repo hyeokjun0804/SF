@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SoulFood</title>
+    <link rel="stylesheet" th:href="@{/css/age.css}">
+</head>
+
+<body>
+    <div id="wrap">
+    
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+
+        <h1>나이대별 맛집</h1>
+
+        <div class="box">
+            <div class="age">나이대</div>
+            <ul>
+                <li>
+                    <a th:href="@{/age1}">10대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age2}">20대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age3}">30대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age4}">40대</a>
+                </li>
+                <li>
+                    <a th:href="@{/age5}">50대</a>
+                </li>
+            </ul>
+        </div>
+
+        <h1>50대</h1>
+
+        <div class="card-container">
+            <div class="card">
+            	<a th:href="@{/mdkj}">
+	                <img th:src="@{/img/명동교자.jpg}" alt="음식 사진">
+	                <h2>명동교자 본점</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+            	<a th:href="@{/aesung}">
+	                <img th:src="@{/img/애성회관.jpg}" alt="음식 사진">
+	                <h2>애성회관 한우곰탕</h2>
+                </a>
+                <h4>한식</h4>
+            </div>
+            <div class="card">
+                <a th:href="@{/ouk}">
+                	<img th:src="@{/img/우래옥.jpg}" alt="음식 사진">
+                	<h2>우래옥</h2>
+            	</a>
+                <h4>한식</h4>
+            </div>
+        </div>
+		<footer th:replace="~{footer :: footerFragment}"></footer>
+    </div>
+
+    
+</body>
+</html>
